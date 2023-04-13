@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>활용-1-문자변환</title>
+  <script src="js/output.js"></script>
+  <script>
+    //아이디 입력을 할 때
+    var userName = prompt("영문 이름을 입력하세요(대소문자 혼합)", "GTxRyan");
+
+    prn("<h3> 입력한 영문이름(userName) : " + userName + "</h3>");
+
+    var upperName = userName.toUpperCase();//영문을 대문자로 변환
+    prn("userName.toUpperCase() : " + upperName);
+
+    var lowerName = userName.toLowerCase();
+    prn("userName.toLowerCase() : " + lowerName);
+
+    line();
+
+    var userNum = prompt("전화번호를 입력하세요(숫자만 최대 11자리)", "01012345678");
+    var result = userNum.substring(0, userNum.length - 4) + "****";// 0은 시작 인덱스 // 전체길이해서 4개를 빼주고
+
+    prn("<h3> 입력한 전화번호(userNum) : + userNum " + "</h3>");
+
+    prn("userNum.substring( 0, userNum.length - 4) + \"****\" :" + result);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

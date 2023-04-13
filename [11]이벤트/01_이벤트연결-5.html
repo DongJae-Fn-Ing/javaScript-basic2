@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트연결</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector("#btn");
+
+      function view(){
+        alert("버튼을 클릭했습니다.");
+      }
+      bt.onclick = view; //이런식으로 쓸 수있지만 지역함수라 하지만 쓰지마
+    }
+  </script>
+</head>
+<body>
+  <div id="btn">클릭</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>활용-1-닫기버튼</title>
+<link rel="stylesheet" href="http://wooreeweb.com/cst/bnr.css">
+  <script>
+    window.onload = function(){
+      var banner = document.querySelector("#bnrWrap");
+      var close = document.querySelector("#close");
+      var check = false;
+
+      close.onclick = function(){
+        if(!check){//폴스가 참이라면
+          banner.style.visibility = "visible";
+          check = true; //현재 폴스 상태이면 트루
+        }else{
+          banner.style.visibility = "hidden";
+          check = false; //폴스상태가 아니면 폴스
+        }
+      }
+      close.onclick();
+    }
+  </script>
+</head>
+<body>
+  <div id="bnrWrap">
+    <div id="topBnr">
+      <img src="http://wooreeweb.com/img/tb.jpg" alt="">
+<i id="close" class="fa fa-close fa- 3x"></i>
+    </div>
+  </div>
+</body>
+</html>

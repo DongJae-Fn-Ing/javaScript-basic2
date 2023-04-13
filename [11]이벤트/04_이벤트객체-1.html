@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트객체</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function () {
+      var bt = document.querySelector("#btn");
+      bt.onclick = function () {
+        var str = "target : " + event.target + "\n"; //어디에 이벤트가 걸렸는지 알려준다.
+        str += "type : " + event.type + "\n"; //이벤트 종류를 알려준다.
+        str += "clientX : " + event.clientX + "\n"; // 브라우저 내에서 클릭한 위치
+        str += "clientY : " + event.clientY + "\n"; // 브라우저 내에서 클릭한 위치
+        str += "screenX : " + event.screenX + "\n"; // 모니터상 클릭한 위치
+        str += "screenY : " + event.screenY + "\n"; // 모니터상 클릭한 위치
+        str += "Mouse Button : " + event.button; // 마우스 왼쪽 0번 오른쪽 1번 휠은 번호 없다.
+        alert(str);
+      }
+      var txt = document.getElementById("txt");
+      txt.onkeydown = function(event){ //onkeydown 키를 눌렀을 때  onkeyup 눌러다가 땠을 때 onkeypress 누르고 있을 때 mouse도 마찬가지
+        if(event.keyCode == 9){ //탭키의 키코드는 9개 키코드 찾아서 해라 외우지 마라
+          alert("TAB 키를 눌렀습니다.");
+        }
+      }
+      
+    }
+  </script>
+</head>
+
+<body>
+  <div id="btn">클릭</div>
+  <input type="text" id="txt" placeholder="TAB키를 눌러보세요">
+
+</body>
+
+</html>

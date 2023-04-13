@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number(숫자) 객체</title>
+  <script src="js/output.js"></script>
+  <script>
+    prn("최대값(Number.Max_value) : " + Number.MAX_VALUE); 
+    //자동제공 객체 숫자형 객체  . 뒤로는 상수값이기 때문에 정해져 있다 수가 그래서 대문자 자바스크립트가 인식할 수 있는 최대값을 보여주는 것 10의 308제곱
+    prn("최소값(Number.Min_value) : " + Number.MIN_VALUE); // 위와 반대
+
+    prn("양의 무한대(Number.POSITIVE_INFINITY) : " + Number.POSITIVE_INFINITY);
+    prn("음의 무한대(Number.NEGATIVE_INFINITY) : " + Number.NEGATIVE_INFINITY);
+
+    line();
+
+    var num = 328.5764;
+    prn("<h2> 변수 num = " + num + "<h2>");
+    line();
+
+    prn("[소수점 첫째자리 반올림] num.toFixed() : " + num.toFixed());
+    //.toFixed 소수점 반올림 to~ 변환하라라는 뜻 괄호안에 아무것도 없는 경우 첫재짜리 반올림 후 소수점을 정수로 만든다.
+    prn("[소수점 세째자리 반올림] num.toFixed(2) : " + num.toFixed(2));//둘째자리까지 표현하고 셋째자리에서 반올림
+    line();
+
+    prn("[숫자를 문자열로 변환] num.toString()" + num.toString());//문자열로 바꿔라 괄호안에 진법과 진수가 들어간다 아무것도 없은면 10진수가 기본값
+    prn("[숫자를 8진수 문자열로 변환] num.toString(8)" + num.toString(8));//
+    prn("[숫자를 16진수 문자열로 변환] num.toString(16)" + num.toString(16));
+    line();
+
+    prn("[지수형으로 변환] num.toExponential()" + num.toExponential()); 
+    //지수형으로 변경한다. 결국에는 10의 제곱만큼 변경
+    prn("[소수점 2자리까지만 지수형으로 변환] num.toExponential(2)" + num.toExponential(2));
+    line();
+
+    prn("[자리수만큼 반환] num.toPrecision() :" + num.toPrecision());//유효자리 수만 표현
+    prn("[3자리수만큼 반환] num.toPrecision(3) :" + num.toPrecision(3));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트버블링방지</title>
+  <script>
+    window.onload = function(){
+      var a = document.querySelector("#a");
+      var b = document.querySelector("#b");
+
+      a.onclick = function(){
+        alert("부모 요소 div를 클릭했습니다.");
+      }
+      b.onclick = function(e){
+        alert("자식 요소 p를 클릭했습니다.");
+        //이벤트 버블링 이벤트가 계속 올라가는 것 자식 이벤트도 클릭하면 부모 이벤트도 실행을 한다.
+        //그것을 방지하기 위해
+        e.stopPropagation();//이벤트 버블링 방지
+
+        /* 구 IE 호환
+        if (window.event){
+          window.event.cancelBubble = true;
+        }else{
+          e.stopPropagation();
+        } */
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="a">
+    a 클릭
+    <p id="b">b 클릭</p>
+  </div>
+  <style>
+    #a{background-color: crimson; padding: 20px;}
+    #b{background-color: orange; padding: 20px;}
+  </style>
+</body>
+</html>

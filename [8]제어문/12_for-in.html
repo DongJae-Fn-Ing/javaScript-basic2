@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for-in</title>
+  <script>
+    var array = [1, 2, 3 ,4, 5]; //객체의 반복 기법 for ( in )
+
+    //for(var i = 0; i < array.length; i++)
+    for(i in array){ //i는 시작변수 in  array 객체변수
+      //객체인 경우만 축약을 하여 쓸 수 있다.
+      document.write("<p>array" + array[i]);//인덱스 번호
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

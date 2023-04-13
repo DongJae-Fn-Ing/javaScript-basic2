@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>break</title>
+  <script>
+    for(var i = 1; i<= 10; i++){
+      //변수 i 값의 6일 경우 break 실행
+      if(i == 6){
+        document.write("===============<br>");
+        document.write("* i의 값이 " + i + "이(가) 되어 종료합니다.");
+        break; //가장 가까운 반복문을 나간다. if는 조건문이다 반복문이 아니라 그래서 for문을 나간다.
+      }
+      document.write("i = ", i, "<br>");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

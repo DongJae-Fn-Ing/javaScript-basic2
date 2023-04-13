@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트연결-2</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    var bt = document.getElementById("btn");
+    bt.onclick = function(){
+      alert("버튼을 클릭했습니다.");
+    }
+    //여기서는 작동을 왜 안하지?  출력을 할 때 이 부분까지 id가 없고 대상이 없다.
+    //자바스크립트는 위치가 중요하다. 항상 생각을 해야한다. 바디의 내용이 먼저 출력이 되어야한다.
+  </script>
+</head>
+<body>
+  <div id="btn">클릭</div>
+ <!-- 여기서는 작동이 된다. -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>switch</title>
+  <script>
+    var ff = prompt("좋아하는 과일은?", "사과, 딸기, 바나나, 수박 중 하나만 입력");
+
+    switch( ff ){ //검사를 하지 않고 다이렉트로 간다. 연산을 하지 않는다.
+      case "사과":
+      document.write("사과는 ...");
+      break; // 실행 중인게 브레이크를 만나면 스위치 밖으로 나간다 브레이크가 없으면 밑에 거 까지 출력
+      case "딸기":
+      document.write("딸기는 논산");
+      break;
+      case "바나나":
+      document.write("바나나는 필리핀");
+      break;
+      case "수박":
+      document.write("수박은 고창");
+      break;
+      default:
+      document.write("정확하게 입력하세요!");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

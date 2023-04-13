@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트연결</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    //이벤트는 특정한 액션에 의해 반응하는 것
+    function view (){
+      alert("view ()를 클릭했습니다.");
+    }
+    //onclick 자바스크립트 클릭을 하면 호출이 된다.
+  </script>
+</head>
+<body>
+  <div onclick="javascript:view()">클릭1</div> <!-- 빨리 확인이 가능하지만 나중에 제어가 힘들어진다 -->  
+  <!-- 자바스크립트를 클릭해서 뷰를 사용해라 -->
+  <div onclick="alert('클릭했습니다.')">클릭2</div> <!-- 이벤트 안에 직접 작성이 가능하지만 비추 -->
+</body>
+</html>

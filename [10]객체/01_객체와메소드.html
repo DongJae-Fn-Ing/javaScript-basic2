@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_객체와메소드</title>
+  <script src="js/output.js"></script>
+  <script>
+    //객체 생성
+    var cc = new Object(); //new ??? 객체를 생성하겠다 오브젝트를 형태를 가진
+    //첫글자가 대문자면 함수형태의 생성자 자바스크립트가 미리 만들어논 것
+
+
+    //객체의 속성(property)과 메소드(method) 설정/변경/저장
+    cc.color = "red"; //cc라는 객체의 color 속성을 레드라고 설정
+    cc.diameter = 100;
+    cc.radius = function () { //메소드 구성
+      var n = this.diameter / 2; // this는 현재 디아미터값
+      return n;
+    } 
+    //cc.radius(); 메소드 호출법
+    //객체의 속성(데이터) 읽어보기
+    
+    prn("cc.color : " + cc.color);
+    prn("cc.diameter : " + cc.diameter);
+    //객체의 메소드(함수) 실행
+    prn("cc.radius() : " + cc.radius());//만들어 논 메소드 식으로감 객체의 행위
+    line();
+    
+    //객체생성 객체는 어떤 사물 무엇가를 위한 부품도 있다
+    //그랜저라는 자동차가 있는데 똑같은 자동차가 여러대가 있을 것이다. 차라는 거 자체가 객체
+    //색상이랑 옵션이 다를 것 이다. 색상이랑 옵션이 조금씩 다르다. 이것이 속성
+    //객체의 속성(특징)은 다르다
+
+    //메소드는 구체적인 행위 객체가 할수 있는 행위의 결과
+    //메소드는 해당 객체가 하는 행위 행동 루틴 행동하는 순서
+    
+    cc.color = "blue"; // 속성이기 때문에 변경이 가능하다.
+    cc.diameter = 300; //
+    prn("cc.color : " + cc.color);
+    prn("cc.diameter : " + cc.diameter);
+    prn("cc.radius() : " + cc.radius()); //객체의 행위의 결과
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

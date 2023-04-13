@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트객체</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var btn = document.querySelector("#btn");
+
+      btn.onclick = function(e){//매개변수 e == 특정한 객체가 없는 상태일 때 e라는 매개변수를 준다.
+        //event 매개변수
+        //window.event : 구 IE
+        var eve = e || window.event;//두개 다쓴 것
+        document.body.innerHTML = "<h3> 이벤트 객체 모두 보기</h3><hr>";
+
+        //이벤트(e) 객체의 모든 요소를 화면에 출력
+        for(var key in eve){
+          document.body.innerHTML += "<p> " + key + ":" + eve[key];
+        }
+      }
+    }
+    //이벤트 객체를 확인 해보는 것
+  </script>
+</head>
+<body>
+  <input type="button" id="btn" value="이벤트 객체 모두 보기">
+</body>
+</html>

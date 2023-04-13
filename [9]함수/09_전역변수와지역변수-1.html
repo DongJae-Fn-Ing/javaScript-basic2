@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var x = 10; //전역변수
+
+    function gv(){
+      x += 50;
+      document.write("<h3>x= " + x);
+    }
+
+    function lv(){
+      var y = 20; //지역변수
+      y += x;
+      document.write("<h3>y= " + y);//여기서 y는 삭제
+      } //필요할 때만 불러쓰고 컴퓨터의 용량을 확보하기 위해 
+      //전역변수는 자주 호출할 때 쓴다.
+
+      gv();
+      lv();
+      document.write("<hr>");
+      document.write("<h2>x =" + x);
+      document.write("<h2>y =" + y);
+    
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var name = "홍길동";
+
+    var a = 90;
+    var b = 80;
+    var c = 70;
+    function sum(a, b, c){
+      var result = a + b + c;
+      return result;//호출 받고 결과 호출 1로 리턴
+    }
+    function avg(){//호출2 받음
+      var res = sum(a, b, c) / 3; //다시호출
+      return res;
+    }
+    document.write(name + "의 총점 : ");
+    document.write(sum(a,b,c) + "<br>"); //호출1
+    document.write(name + "의 평균 : ");
+    document.write(avg());//호출2
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

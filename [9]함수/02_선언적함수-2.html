@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    //함수 정의
+    function show(){
+    document.write("show() 함수 호출 성공!<br>");    }
+    //함수 호출 (실행)
+    var view = show; // 변수에 함수 대입      함수형 변수 ==객체
+    
+    view();// 실행1: 변수 실행
+
+    //굳이 왜 이런짓 을 하는냐? 보안성을 위해서  택배의 완충제 같은 
+    //객체 지향 언어를 따라하는 방식 외부의 요인으로부터 보호
+    //객체 관점에서는 맞지만 다른 언어에서는 접근 권한이 있다.
+    //자바스크립트에는 없다.
+    document.write(view);//변수의 내용 출력 
+    //과연 뷰에는 뭐가 들어갔을까? 확인
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

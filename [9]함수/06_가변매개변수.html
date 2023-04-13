@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    //가변매개변수 갯수가 정해진 상황이 아닌데 끌어다 쓰는 것
+    function vp(){
+      //근데 매개변수가 필요없다
+      document.write(arguments[1]);//arguments 파라미터 준비물 자바스크립트
+      document.write("<br>");
+      document.write(arguments[0]);// 제이쿼리
+    }
+    vp("jQuery","Javascript"); //자동적으로 배열형태의 준비물로 가져간다  [0][1]
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

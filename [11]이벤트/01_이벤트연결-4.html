@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트연결</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    //내부호출방식
+    window.onload = function(){
+      var bt = document.querySelector("#btn");//querySelector css 선택자 방식으로 불러올 수 있다.
+      //클래스도 불러올 수 있다 .btn식으로
+      function view(){
+        alert("버튼을 클릭했습니다.");
+      }
+      bt.onclick = function(){ //이벤트 실행구조 중요!! 객체.이벤트명 = function(){} 객체의 어떤 이벤트가 발생을 하면 함수를 실행하라
+        view(); //이벤트 안에서 함수 호출 가능! 내부 함수, 외부 함수 생각을 해라
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="btn">클릭</div>
+</body>
+</html>

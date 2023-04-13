@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트강제실행</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector("#btn");
+      var con = document.querySelector("#content");
+      var check = false; //상태변수 논리값을 통해 상태를 바꾼다
+
+      bt.onclick = function(){
+        if(!check){ /* 폴스라면 */ //현재 폴스 상태이면 트루
+          con.style.display = "none";
+          check = true;
+        }else{ //폴스 상태가 아니라면 폴스다 
+          con.style.display = "block";
+          check = false;
+        }
+      }
+      bt.onclick();//강제 실행을 해서 미리 한번 실행을한다
+    }
+  </script>
+</head>
+<body>
+  <div id="btn">클릭</div>
+  <p id="content">내용</p>
+
+  <style>
+    p { height: 300px; background-color: gold;}
+  </style>
+</body>
+</html>

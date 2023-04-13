@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜 구하기</title>
+  <script>
+    var year = prompt("현재 몇 년인가요?", "0000");
+    var mon = prompt("현재 몇 월인가요", "0");
+    var last_day;
+
+    /*입력된 월이 몇일까지 있는지 계산*/
+    switch(mon){
+      case "1":
+        last_day = 31;
+        break;
+      case "2":
+        last_day = 28;
+
+        /*현재 년더기 4년 주기이고
+        100년 주기는 아닌 경우
+        또는  400년 주기로 윤년이므로
+        2월은 29일까지 존재*/
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){ //4년을 기준으로 윤년 100으로 나눠지면 윤년x
+          //400으로 나눠지면 윤년 //4로 나눠지면 --- 윤년 알고리즘 캘린더 용
+          last_day = 29;
+        }
+        break;
+        case "3":
+          last_day = 31;
+        case "4":
+          last_day = 30;
+        case "5":
+          last_day = 31;
+        case "6":
+          last_day = 30;
+        case "7":
+          last_day = 31;
+        case "8":
+          last_day = 31;
+        case "9":
+          last_day = 30;
+        case "10":
+          last_day = 31;
+        case "11":
+          last_day = 30;
+        case "12":
+          last_day = 31;
+          break;
+          
+    }
+    document.write(year, "년", mon, "월<hr>");
+
+    //현재 1일부터 마지막일까지 문서에 출력
+    for(var i = 1; i <= last_day; i++){document.write(i + " | ");}
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

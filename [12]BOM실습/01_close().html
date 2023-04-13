@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>close</title>
+  <script>
+    window.onload = function () {
+      var open = document.getElementById("open");
+      var close = document.getElementById("close");
+      var win;
+
+      function winOpen() {
+        win = window.open("http://wooreeweb.com", "wooreeweb", "width=400,height=300,left=100,top=100");
+      }//open() 팝업창을 뛰우는 메소드 url          title           property
+
+      function winClose() {
+        win.close(); //현재 열려있는 것을 닫힌다  .close() 객체를 종료시킨다.
+      }
+      open.onclick = function () {
+        winwinOpen();
+      }
+      close.onclick = function () {
+        winClose();
+      }
+    }
+  </script>
+</head>
+<!-- 잘 안쓰는 추세 왜 불가한지 체그 -->
+<body>
+  <button id="open">열기</button>
+  <button id="close">닫기</button>
+</body>
+
+</html>

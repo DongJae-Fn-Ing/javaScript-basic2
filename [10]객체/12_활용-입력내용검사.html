@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12_활용-입력내용검사</title>
+  <script src="js/output.js"></script>
+  <script>
+    var userName = prompt('이름을 입력하세요');
+    reg1 = /^[가-힣]{2,5}$/; //^==시작을 뜻하고 $==끝을 뜻한다. 대괄호 안에는 한글 범위 중괄호는 한글로 두글자에서 5글자까지 입력을 해라
+    while (true) {
+      if (reg1.test(userName)) { //참이면 
+        break; //나가라
+      }
+      alert('이름 입력 형식이 잘못되었습니다!');
+      userName = prompt('이름을 입력하세요');
+    }//아니면 경고문 받고 다시 입력해라
+    var userCell = prompt('휴대폰 번호를 입력하세요');
+    reg2 = /^(010|016|011)\d{3,4}\d{4}$/; // \d== 10진정수를 뜻한다. 3글자에서 4글자 수를 입력 \ 숫자 4개
+    while (true) {
+      if (reg2.test(userCell)) {
+        break;
+      }
+      alert('휴대폰 입력 형식이 잘못되었습니다!');
+      userCell = prompt('휴대폰 번호를 입력하세요');
+    }
+    var userEmail = prompt('이메일 주소를 입력하세요');
+    reg3 = /^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/; // /w 단어 \.==무조건 점이 있어야한다.
+    // ? == 있어도되고 없어도 그만 우리나라 도메인 스타일 co.kr
+    while (true) {
+      if (reg3.test(userEmail)) {
+        break;
+      }
+      alert('이메일 입력 형식이 잘못되었습니다!');
+      userEmail = prompt('이메일 주소를 입력하세요');
+    }
+    prn(userName);
+    prn(userCell);
+    prn(userEmail);
+
+    // .this = 얘를 감싸고 가까운 함수(펑션)를 찾고 그 펑션과 연결된 객체와 변수를 찾는다. 
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <script>
+    /* 1부터 10까지 출력 - 서식(1+2...+10=55) */
+    var i = parseInt(prompt("시작 값을 입력하세요"))//초기값
+    //parseInt 문자를 숫자 형태로 형변환을 시켜주는 역활
+    var s = 0;//누적합계를 저장할 변수
+    var end = parseInt(prompt("종료 값을 입력하세요"))//최종값
+    while(i <= end ){
+      document.write(i);
+      
+      if(i<end){
+        document.write("+");
+      }
+
+      s = s + i;
+      i++;
+    }
+    document.write("=" + s);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

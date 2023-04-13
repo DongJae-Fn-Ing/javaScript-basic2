@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트강제실행</title>
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector("#bt");
+      bt.click = function(){
+        alert("클릭 이벤트가 실행되었습니다");
+      }
+      bt.click(); //메소도 형식으로 자동으로 실행
+      //브라우저가 실행하자마자 배너나 공지창 뛰우는 게 가능
+    }
+  </script>
+</head>
+<body>
+  <div id="bt"></div>
+</body>
+</html>

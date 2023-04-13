@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고전이벤트문제</title>
+  <script>
+    //고전 이벤트 
+    function loadEnd1() {alert("loadEnd1() 실행")}
+    function loadEnd2() {alert("loadEnd2() 실행")}
+
+    window.onload = loadEnd1;//x 작동안함 왜그러나? .onload 때문에 로딩이 되는 브라우저 하나이지만
+    //요청이 두개라 마지막 것만 작동을 함
+    window.onload = loadEnd2;
+  </script>
+</head>
+<body>
+  <p>함수 loadEnd1()은 실행되지 않음!</p>
+</body>
+</html>
